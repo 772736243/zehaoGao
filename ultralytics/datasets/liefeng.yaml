@@ -1,0 +1,15 @@
+
+
+train: ./voc
+val: ./voc
+test: ./voc
+#train: D:\AI\NWPU VHR-10 dataset\ImageSets\train.txt
+#val: D:\AI\NWPU VHR-10 dataset\ImageSets\val.txt
+#test: D:\AI\NWPU VHR-10 dataset\ImageSets\test.txt
+# number of classes
+nc: 6
+
+# class names
+names: ["crazing","inclusion","patches","pitted_surface","rolled-in_scale","scratches"]#aeroplane
+#names: ["Aircraft_carrier","Amphibious_dock_carrier","Destroyer","Frigate","Landing_ship","Submarine",
+#           "Medical","Command_ship","Cruiser"ssh -p 13288 root@region-41.seetacloud.com,"Amphibssh ssh -p 43981 root@region-8.seetacloud.com-p 13288 root@region-41.seetacloud.comious_assault_ship","Civilian_ship"]

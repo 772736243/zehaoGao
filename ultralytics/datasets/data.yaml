@@ -1,0 +1,16 @@
+# dataset path
+train: D:\PytorchPro\\ultralytics\dataset\images\train
+val: D:\PytorchPro\\ultralytics\dataset\images\val
+test: D:\PytorchPro\\ultralytics\dataset\images\test
+
+
+names:
+  0: person
+  1: car
+  2: bicycle
+  3: motor
+  4: bus
+  5: truck
+  6: people
+  7: tricycle
+  8: Motor
