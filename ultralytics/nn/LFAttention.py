@@ -56,7 +56,10 @@ class LFA(nn.Module):
         # print(x)
         x_size = x.size()
         pool1 = nn.AdaptiveAvgPool2d((x_size[2], x_size[3]))
-        x = x * self.act(self.fc(pool1(x)))
+        pool2 = nn.AdaptiveMaxPool2d((x_size[2], x_size[3]))
+        x1 = x * self.act(self.fc(pool2(x)))
+        x2 = x * self.act(self.fc(pool1(x)))
+        x = x1 + x2
         # print(x.shape)
         x_perm1 = x.permute(0, 2, 1, 3).contiguous()
         x_out1 = self.cw(x_perm1)
