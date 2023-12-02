@@ -32,7 +32,7 @@ class LFPool(nn.Module):
 class AttGate(nn.Module):
     def __init__(self):
         super(AttGate, self).__init__()
-        kernel_size = 7
+        kernel_size = 3
         self.compress = LFPool()
         self.conv = BasicConv(2, 1, kernel_size, stride=1, padding=(kernel_size - 1) // 2, relu=False)
 
@@ -48,7 +48,6 @@ class LFA(nn.Module):
         super(LFA, self).__init__()
         self.cw = AttGate()
         self.hc = AttGate()
-        # self.pool1 = nn.AdaptiveAvgPool2d((input_size[2], input_size[3]))
         self.fc = nn.Conv2d(channels, channels, 1, 1, 0, bias=True)
         self.act = nn.Sigmoid()
 
